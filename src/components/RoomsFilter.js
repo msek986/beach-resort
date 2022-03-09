@@ -2,7 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { RoomContext } from '../context';
 import Title from '../components/Title';
-// get all unique values
+
 const getUnique = (item, value) => {
   return [...new Set(item.map(item => item[value]))]; //Set uzima samo jedinstvene vrednosti
 };
@@ -22,7 +22,6 @@ export default function RoomsFilter({ rooms }) {
     pets
   } = context;
 
-  //   get unique types
   let types = getUnique(rooms, 'type');
   // add all
   types = ['all', ...types];
@@ -61,8 +60,7 @@ export default function RoomsFilter({ rooms }) {
             {types}
           </select>
         </div>
-        {/* end of select type */}
-        {/* guests type */}
+
         <div className='form-group'>
           <label htmlFor='capacity'>Guests</label>
           <select
@@ -75,8 +73,7 @@ export default function RoomsFilter({ rooms }) {
             {people}
           </select>
         </div>
-        {/* end of guets type */}
-        {/* room price */}
+
         <div className='form-group'>
           <label htmlFor='price'>room price ${price}</label>
           <input
@@ -90,8 +87,7 @@ export default function RoomsFilter({ rooms }) {
             className='form-control'
           />
         </div>
-        {/* end of room price */}
-        {/* size */}
+
         <div className='form-group'>
           <label htmlFor='size'>room size</label>
           <div className='size-inputs'>
@@ -113,8 +109,7 @@ export default function RoomsFilter({ rooms }) {
             />
           </div>
         </div>
-        {/* end of size */}
-        {/* extras */}
+
         <div className='form-group'>
           <div className='single-extra'>
             <input
@@ -137,7 +132,6 @@ export default function RoomsFilter({ rooms }) {
             <label htmlFor='pets'>pets</label>
           </div>
         </div>
-        {/* end of extras */}
       </form>
     </section>
   );
