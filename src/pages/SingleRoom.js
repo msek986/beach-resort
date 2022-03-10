@@ -44,7 +44,6 @@ export class SingleRoom extends Component {
     const [mainImg, ...defaultImg] = images; //sve u komentarima je ukoliko se zele prikazati samo tri slike
     return (
       <>
-        {/* <StyledHero img={images[0] || this.state.defaultBcg}> */}
         <StyledHero img={mainImg || this.state.defaultBcg}>
           <Banner title={`${name} room`}>
             <Link to='/rooms' className='btn-primary'>
